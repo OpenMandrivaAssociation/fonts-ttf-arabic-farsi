@@ -14,7 +14,7 @@ Source:		http://www.farsiweb.info/font/%{name_orig}-%{version}.tar.bz2
 URL:		http://www.farsiweb.info
 BuildArch:	noarch
 BuildRoot:	%_tmppath/%name-%version-%release-buildroot
-BuildPrereq: 	freetype-tools
+BuildRequires: 	freetype-tools
 Requires(post):		fontconfig
 Requires(postun):	fontconfig
 Provides:	fonts-ttf-arabic
