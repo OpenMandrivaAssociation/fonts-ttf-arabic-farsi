@@ -1,11 +1,11 @@
 %define name fonts-ttf-arabic-farsi
 %define name_orig farsifonts
 %define version 0.4
-%define release %mkrel 4
+%define release %mkrel 5
 %define fontdir	fonts/TTF/arabic/farsi
 
 Name:		%{name}
-Summary:	Free Arabic TrueType fonts
+Summary:	Arabic TrueType fonts
 Version:	%{version}
 Release:	%{release}
 License:	GPL
