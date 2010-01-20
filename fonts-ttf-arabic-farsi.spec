@@ -1,7 +1,7 @@
 %define name fonts-ttf-arabic-farsi
 %define name_orig farsifonts
 %define version 0.4
-%define release %mkrel 7
+%define release %mkrel 8
 %define fontdir	fonts/TTF/arabic/farsi
 
 Name:		%{name}
@@ -15,8 +15,6 @@ URL:		http://www.farsiweb.info
 BuildArch:	noarch
 BuildRoot:	%_tmppath/%name-%version-%release-buildroot
 BuildRequires: 	freetype-tools
-Requires(post):		fontconfig
-Requires(postun):	fontconfig
 Provides:	fonts-ttf-arabic
 
 %description
@@ -45,15 +43,6 @@ popd
 mkdir -p %{buildroot}%_sysconfdir/X11/fontpath.d/
 ln -s ../../..%_datadir/%fontdir \
     %{buildroot}%_sysconfdir/X11/fontpath.d/ttf-arabic-farsi:pri=50
-
-%post
-[ -x %{_bindir}/fc-cache ] && %{_bindir}/fc-cache 
-
-%postun
-# 0 means a real uninstall
-if [ "$1" = "0" ]; then
-   [ -x %{_bindir}/fc-cache ] && %{_bindir}/fc-cache 
-fi
 
 %clean
 rm -rf %buildroot
