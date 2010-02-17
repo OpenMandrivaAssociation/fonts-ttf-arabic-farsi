@@ -1,7 +1,7 @@
 %define name fonts-ttf-arabic-farsi
 %define name_orig farsifonts
 %define version 0.4
-%define release %mkrel 8
+%define release %mkrel 9
 %define fontdir	fonts/TTF/arabic/farsi
 
 Name:		%{name}
