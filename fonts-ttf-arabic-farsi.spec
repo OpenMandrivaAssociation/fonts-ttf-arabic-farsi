@@ -14,7 +14,7 @@ Source:		http://www.farsiweb.info/font/%{name_orig}-%{version}.tar.bz2
 URL:		http://www.farsiweb.info
 BuildArch:	noarch
 BuildRoot:	%_tmppath/%name-%version-%release-buildroot
-BuildRequires: 	freetype-tools
+BuildRequires:	mkfontscale
 Provides:	fonts-ttf-arabic
 
 %description
@@ -33,11 +33,8 @@ mkdir -p %buildroot/%_datadir/%fontdir
 cp *.ttf %buildroot/%_datadir/%fontdir
 
 pushd %buildroot/%_datadir/%fontdir
-%_sbindir/ttmkfdir -u > fonts.scale
+mkfontscale
 cp fonts.scale fonts.dir
-%if %mdkversion < 20070
-%_bindir/fc-cache . 
-%endif
 popd
 
 mkdir -p %{buildroot}%_sysconfdir/X11/fontpath.d/
