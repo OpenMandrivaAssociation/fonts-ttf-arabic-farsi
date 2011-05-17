@@ -13,6 +13,7 @@ Group:		System/Fonts/True type
 Source:		http://www.farsiweb.info/font/%{name_orig}-%{version}.tar.bz2
 URL:		http://www.farsiweb.info
 BuildArch:	noarch
+BuildRequires: fontconfig
 BuildRoot:	%_tmppath/%name-%version-%release-buildroot
 BuildRequires:	mkfontscale
 Provides:	fonts-ttf-arabic
