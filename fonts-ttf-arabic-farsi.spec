@@ -4,7 +4,7 @@
 Summary:	Arabic TrueType fonts
 Name:		fonts-ttf-arabic-farsi
 Version:	0.4
-Release:	21
+Release:	22
 License:	GPLv2
 Group:		System/Fonts/True type
 Url:		http://www.farsiweb.info
