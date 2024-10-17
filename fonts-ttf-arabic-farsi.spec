@@ -7,7 +7,7 @@ Version:	0.4
 Release:	25
 License:	GPLv2
 Group:		System/Fonts/True type
-Url:		http://www.farsiweb.info
+Url:		https://www.farsiweb.info
 Source0:	http://www.farsiweb.info/font/%{oname}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	fontconfig
